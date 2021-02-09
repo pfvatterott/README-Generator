@@ -73,16 +73,11 @@ const questions = [
 
 ]
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
 // function to initialize program
 function init(questions) {
     inquirer.prompt(questions).then(answers => {
         fs.writeFile('README.md', generateMarkdown(answers), (err) => 
-            err ? console.error(err) : console.log('logged'))
-        // Use user feedback for... whatever!!
+            err ? console.error(err) : console.log('Your README.txt has been created!'))
         })
 }
 
