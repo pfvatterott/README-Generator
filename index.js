@@ -76,8 +76,8 @@ const questions = [
 // function to initialize program
 function init(questions) {
     inquirer.prompt(questions).then(answers => {
-        fs.writeFile('README.md', generateMarkdown(answers), (err) => 
-            err ? console.error(err) : console.log('Your README.txt has been created!'))
+        fs.writeFile('UserREADME.md', generateMarkdown(answers), (err) => 
+            err ? console.error(err) : console.log('Your UserREADME has been created!'))
         })
 }
 
